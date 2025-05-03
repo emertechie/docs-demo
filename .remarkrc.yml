@@ -1,0 +1,9 @@
+plugins:
+  # Check that markdown is consistent.
+  - remark-preset-lint-consistent
+  # Few recommended rules.
+  - remark-preset-lint-recommended
+  - remark-mdx
+  - remark-frontmatter
+settings:
+  bullet: "-"

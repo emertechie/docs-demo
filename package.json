@@ -15,7 +15,8 @@
     "gen-api-docs": "docusaurus gen-api-docs",
     "clean-api-docs": "docusaurus clean-api-docs",
     "gen-api-docs:version": "docusaurus gen-api-docs:version",
-    "clean-api-docs:version": "docusaurus clean-api-docs:version"
+    "clean-api-docs:version": "docusaurus clean-api-docs:version",
+    "format": "remark . --output"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
@@ -44,6 +45,11 @@
     "@docusaurus/module-type-aliases": "^3.7.0",
     "@docusaurus/tsconfig": "^3.7.0",
     "@docusaurus/types": "^3.7.0",
+    "remark-cli": "^12.0.1",
+    "remark-frontmatter": "^5.0.0",
+    "remark-mdx": "^3.1.0",
+    "remark-preset-lint-consistent": "^6.0.1",
+    "remark-preset-lint-recommended": "^7.0.1",
     "typescript": "^5.8.3"
   }
 }
