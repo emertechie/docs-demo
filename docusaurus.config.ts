@@ -9,16 +9,17 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 const config: Config = {
   title: "My Site",
   tagline: "Dinosaurs are cool",
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  url: "https://emertechie.github.io",
+  baseUrl: "/docs-test/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "emertechie", // Usually your GitHub org/user name.
+  projectName: "docs-test", // Usually your repo name.
+  trailingSlash: false,
 
   presets: [
     [
@@ -48,192 +49,191 @@ const config: Config = {
     ],
   ],
 
-  themeConfig:
-    {
-      docs: {
-        sidebar: {
-          hideable: true,
-        },
+  themeConfig: {
+    docs: {
+      sidebar: {
+        hideable: true,
       },
-      navbar: {
-        title: "My Site",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
-        },
-        items: [
-          {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Tutorial",
-          },
-          { to: "/blog", label: "Blog", position: "left" },
-          {
-            label: "Petstore API",
-            position: "left",
-            to: "/docs/category/petstore-api",
-          },
-          {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
+    },
+    navbar: {
+      title: "My Site",
+      logo: {
+        alt: "My Site Logo",
+        src: "img/logo.svg",
       },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        additionalLanguages: [
-          "ruby",
-          "csharp",
-          "php",
-          "java",
-          "powershell",
-          "json",
-          "bash",
-          "dart",
-          "objectivec",
-          "r",
-        ],
-      },
-      languageTabs: [
+      items: [
         {
-          highlight: "python",
-          language: "python",
-          logoClass: "python",
+          type: "doc",
+          docId: "intro",
+          position: "left",
+          label: "Tutorial",
+        },
+        { to: "/blog", label: "Blog", position: "left" },
+        {
+          label: "Petstore API",
+          position: "left",
+          to: "/docs/category/petstore-api",
         },
         {
-          highlight: "bash",
-          language: "curl",
-          logoClass: "curl",
-        },
-        {
-          highlight: "csharp",
-          language: "csharp",
-          logoClass: "csharp",
-        },
-        {
-          highlight: "go",
-          language: "go",
-          logoClass: "go",
-        },
-        {
-          highlight: "javascript",
-          language: "nodejs",
-          logoClass: "nodejs",
-        },
-        {
-          highlight: "ruby",
-          language: "ruby",
-          logoClass: "ruby",
-        },
-        {
-          highlight: "php",
-          language: "php",
-          logoClass: "php",
-        },
-        {
-          highlight: "java",
-          language: "java",
-          logoClass: "java",
-          variant: "unirest",
-        },
-        {
-          highlight: "powershell",
-          language: "powershell",
-          logoClass: "powershell",
-        },
-        {
-          highlight: "dart",
-          language: "dart",
-          logoClass: "dart",
-        },
-        {
-          highlight: "javascript",
-          language: "javascript",
-          logoClass: "javascript",
-        },
-        {
-          highlight: "c",
-          language: "c",
-          logoClass: "c",
-        },
-        {
-          highlight: "objective-c",
-          language: "objective-c",
-          logoClass: "objective-c",
-        },
-        {
-          highlight: "ocaml",
-          language: "ocaml",
-          logoClass: "ocaml",
-        },
-        {
-          highlight: "r",
-          language: "r",
-          logoClass: "r",
-        },
-        {
-          highlight: "swift",
-          language: "swift",
-          logoClass: "swift",
-        },
-        {
-          highlight: "kotlin",
-          language: "kotlin",
-          logoClass: "kotlin",
-        },
-        {
-          highlight: "rust",
-          language: "rust",
-          logoClass: "rust",
+          href: "https://github.com/facebook/docusaurus",
+          label: "GitHub",
+          position: "right",
         },
       ],
-    } satisfies Preset.ThemeConfig,
+    },
+    footer: {
+      style: "dark",
+      links: [
+        {
+          title: "Docs",
+          items: [
+            {
+              label: "Tutorial",
+              to: "/docs/intro",
+            },
+          ],
+        },
+        {
+          title: "Community",
+          items: [
+            {
+              label: "Stack Overflow",
+              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+            },
+            {
+              label: "Discord",
+              href: "https://discordapp.com/invite/docusaurus",
+            },
+            {
+              label: "Twitter",
+              href: "https://twitter.com/docusaurus",
+            },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            {
+              label: "Blog",
+              to: "/blog",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/facebook/docusaurus",
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+    prism: {
+      additionalLanguages: [
+        "ruby",
+        "csharp",
+        "php",
+        "java",
+        "powershell",
+        "json",
+        "bash",
+        "dart",
+        "objectivec",
+        "r",
+      ],
+    },
+    languageTabs: [
+      {
+        highlight: "python",
+        language: "python",
+        logoClass: "python",
+      },
+      {
+        highlight: "bash",
+        language: "curl",
+        logoClass: "curl",
+      },
+      {
+        highlight: "csharp",
+        language: "csharp",
+        logoClass: "csharp",
+      },
+      {
+        highlight: "go",
+        language: "go",
+        logoClass: "go",
+      },
+      {
+        highlight: "javascript",
+        language: "nodejs",
+        logoClass: "nodejs",
+      },
+      {
+        highlight: "ruby",
+        language: "ruby",
+        logoClass: "ruby",
+      },
+      {
+        highlight: "php",
+        language: "php",
+        logoClass: "php",
+      },
+      {
+        highlight: "java",
+        language: "java",
+        logoClass: "java",
+        variant: "unirest",
+      },
+      {
+        highlight: "powershell",
+        language: "powershell",
+        logoClass: "powershell",
+      },
+      {
+        highlight: "dart",
+        language: "dart",
+        logoClass: "dart",
+      },
+      {
+        highlight: "javascript",
+        language: "javascript",
+        logoClass: "javascript",
+      },
+      {
+        highlight: "c",
+        language: "c",
+        logoClass: "c",
+      },
+      {
+        highlight: "objective-c",
+        language: "objective-c",
+        logoClass: "objective-c",
+      },
+      {
+        highlight: "ocaml",
+        language: "ocaml",
+        logoClass: "ocaml",
+      },
+      {
+        highlight: "r",
+        language: "r",
+        logoClass: "r",
+      },
+      {
+        highlight: "swift",
+        language: "swift",
+        logoClass: "swift",
+      },
+      {
+        highlight: "kotlin",
+        language: "kotlin",
+        logoClass: "kotlin",
+      },
+      {
+        highlight: "rust",
+        language: "rust",
+        logoClass: "rust",
+      },
+    ],
+  } satisfies Preset.ThemeConfig,
 
   plugins: [
     [
