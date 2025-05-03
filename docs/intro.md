@@ -4,13 +4,6 @@ tags:
   - test
 ---
 
-Mercury
-=======
-
-## Venus
-
-### Earth ###
-
 # Tutorial Intro
 
 Let's discover **Docusaurus in less than 5 minutes**.
