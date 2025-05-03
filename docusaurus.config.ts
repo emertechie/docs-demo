@@ -10,7 +10,7 @@ const config: Config = {
   title: "My Site",
   tagline: "Dinosaurs are cool",
   url: "https://emertechie.github.io",
-  baseUrl: "/docs-test/",
+  baseUrl: "/docs-demo/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -18,7 +18,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "emertechie", // Usually your GitHub org/user name.
-  projectName: "docs-test", // Usually your repo name.
+  projectName: "docs-demo", // Usually your repo name.
   trailingSlash: false,
 
   presets: [
