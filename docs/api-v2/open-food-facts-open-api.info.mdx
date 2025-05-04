@@ -1,0 +1,147 @@
+---
+id: open-food-facts-open-api
+title: "Open Food Facts Open API"
+description: "As a developer, the Open Food Facts API allows you to get information"
+sidebar_label: Introduction
+sidebar_position: 0
+hide_title: true
+custom_edit_url: null
+---
+
+import ApiLogo from "@theme/ApiLogo";
+import Heading from "@theme/Heading";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+import Export from "@theme/ApiExplorer/Export";
+
+<span
+  className={"theme-doc-version-badge badge badge--secondary"}
+  children={"Version: 2"}
+>
+</span>
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Open Food Facts Open API"}
+>
+</Heading>
+
+
+
+As a developer, the Open Food Facts API allows you to get information
+and contribute to the products database. You can create great apps to
+help people make better food choices and also provide data to enhance the database.
+
+**IMPORTANT**: Please read the [API introduction](https://openfoodfacts.github.io/openfoodfacts-server/api/) before using this API.
+
+
+<div
+  style={{"marginBottom":"2rem"}}
+>
+  <Heading
+    id={"authentication"}
+    as={"h2"}
+    className={"openapi-tabs__heading"}
+    children={"Authentication"}
+  >
+  </Heading><SchemaTabs
+    className={"openapi-tabs__security-schemes"}
+  >
+    <TabItem
+      label={"API Key: cookieAuth"}
+      value={"cookieAuth"}
+    >
+      
+      
+      Session cookie containing user ID, username, and session token.
+      The value is structured as: user_id&username&user_session&session_token
+      e.g. "user_id&exampleuser&user_session&abcdefghijklmnopqrstuvwxyz123456789ABCDEFGHIJKLM"
+      
+      
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Security Scheme Type:
+              </th><td>
+                apiKey
+              </td>
+            </tr><tr>
+              <th>
+                Header parameter name:
+              </th><td>
+                session
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </TabItem><TabItem
+      label={"API Key: userAgentAuth"}
+      value={"userAgentAuth"}
+    >
+      
+      
+      Authentication using User-Agent header User-Agent header in the format 'app_name/app_version (email)'
+      
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Security Scheme Type:
+              </th><td>
+                apiKey
+              </td>
+            </tr><tr>
+              <th>
+                Header parameter name:
+              </th><td>
+                User-Agent
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </TabItem>
+  </SchemaTabs>
+</div><div
+  style={{"display":"flex","flexDirection":"column","marginBottom":"var(--ifm-paragraph-margin-bottom)"}}
+>
+  <h3
+    style={{"marginBottom":"0.25rem"}}
+  >
+    Contact
+  </h3><span>
+    Open Food Facts: [reuse@openfoodfacts.org](mailto:reuse@openfoodfacts.org)
+  </span><span>
+    URL: [https://slack.openfoodfacts.org/](https://slack.openfoodfacts.org/)
+  </span>
+</div><div
+  style={{"marginBottom":"var(--ifm-paragraph-margin-bottom)"}}
+>
+  <h3
+    style={{"marginBottom":"0.25rem"}}
+  >
+    Terms of Service
+  </h3><a
+    href={"https://world.openfoodfacts.org/terms-of-use"}
+  >
+    {'https://world.openfoodfacts.org/terms-of-use'}
+  </a>
+</div><div
+  style={{"marginBottom":"var(--ifm-paragraph-margin-bottom)"}}
+>
+  <h3
+    style={{"marginBottom":"0.25rem"}}
+  >
+    License
+  </h3><a
+    href={"https://opendatacommons.org/licenses/odbl/summary/index.html"}
+  >
+    data: ODbL
+  </a>
+</div>
+      

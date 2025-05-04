@@ -1,0 +1,73 @@
+---
+id: post-cgi-product-image-unselect-pl
+title: "Unselect A Photo"
+description: "This endpoint allows the user to unselect a photo for a product."
+sidebar_label: "Unselect A Photo"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVl9z4jYQ/yoaP9wlGcCQu7QpT+UuTcvlrmQa8tAJGUbYC1aQJZ8kE2iG795d2SY2IZc+lhek9e5v/+/qKYjBRkZkTmgV9INxIiwDFWdaKMe4lPrRMpcAyy0Y5jTLlQUJEX5jWaKRMNeGzkbHeeQ6EzWumNPcOqKvRAweouRhkUYCV7EnipQvgA0v6tiIErQCnYHhZNYwRsMybV07Woh2iTL1gtOdSCZRxMD3HKz7pONN0H8KIq0cKEfHNJdOZNy4EO1N2zF3nMg2SiD1J7fJANXo2QOiIZQTThKhUjDlU+/vtNSBLGgJmugE2EJZDDUg64xQC+Rqxtf7ruf1eCAPrHmaeXUfT896ve7ZWbf34bwXbFuBiN8GLWI4FyBjdlRcRHy8U+PTVAtvQ+HcYJCmcxNs/Y9iaDONnN6p026X/prqRleIUIstzzIpIp+q8MESSyOwrweyUETB3gt+M7LWcZfbt8NQ8FVu7wp1V0cNvyvmJQW5uEz3UqjydAbmNTX1TB5U0aXsUTJ8Yg6ZfyALP0qtS7hjj9zuXIO4zBpqSsElumoUCiF3Cd5CbJnwRy2DnboCg9G9209zDCv8nhuJ58S5zPbD8FEbGXfQXTXXOp7zyNmOAocx3Jcmnf9JXJvFYfH1hh3RcIl1xLLcoF9w3EBEQKkjLhP0uH/ePe8G23tyKMqNcBvyqH6/oYqsWlUvBQxyitAuKzwTV7BBBaLoU2LBm+KpzxlYW+S3aedNQWcFP6Ou4EJheosZOLxo+QOhtPzMK4GwH5egynG54jLHlrUMKwPzlBuIGbd9LzkV8bsKwR+mJcK78n/qkSYKOosOmwSVTFlbdG2K8VkUw3yRiIelTJXOvhvr8tXjevNP7/TDx7Offj7/ZfDp88Vvl7//Mfxy9fXbJMBpjAVGIIMFtnwVt2YgiIofyzmAplMMblGm7YVYAjzGgLykCOVbiMYylvd7HCZT8jWkA1UmoR3hLBHy+P3zqGhmq4B6ztazloB6Q2C51UfRCAuQXWIFsksqQebvg+vhi+wOLK427AOQ1OEtb+i+MMpVe3Kjc5qzC3CMVJJDiDNRlHeqDCNmuQNiqY1/y2gZzbiFDvsbASKO1WSAI+OC/hgGAlewnqgEZMYy0JhWlvIlsBk4hxGkXmJRokUE1tcYl1bvNi+hk0pQCVdRsYl3Gido3cnJ8Nv16K/x4M/xyUmfXUvALwxVFwv6jhzEx0BhLfpzf1S1c7ORF8Il+awjdJPeLiYM5lOEx2gyxgXK8nD02ED4Yt+jK6kdzW+QHT15e2qEXqCt5+3cLxHfe5HfSGUZ7KXqxTiykkfLA8A0mqngkNVQB/16aGIFuPOA1tezPgprn40uZl9fqCIE+hzpNMWl59WUADbU8UyGNk9TbjahUDGsO4lLaTqv25hC7CpcAIYcQuh2r9Ml9WVvIPWUrjT2U65q1txWC3DArmnh7ld37X30f3r2lQ3uYO3CTOIw9cOHgvlULrW7AJda8Up4Za3h2KelQKxPT1Tot0Zut0TGt5uh1YDHFTeCz2gg3N2jinKG0B5c4mTpB5+L6LTHZBCx45BG8qGXJO2vQmgQRZC5GvuLxxHtpN2yvh7djJF5Vj5YU/8ACQjY47aej2Tkdvsvo/UdSA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-v2/open-food-facts-open-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Unselect A Photo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/cgi/product_image_unselect.pl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows the user to unselect a photo for a product.
+The user must provide the product code and the image ID to unselect.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","title":"unselect_a_photo_request","properties":{"code":{"type":"string","description":"code of the product","example":"4251105501381"},"id":{"type":"string","description":"image field (image id) of the photo to unselect","example":"front_fr"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"title":"unselect_a_photo_response","type":"object","properties":{"status":{"type":"string","description":"status of the unselect operation","example":"status ok"},"status_code":{"type":"number","description":"status code of the operation","example":0},"imagefield":{"type":"string","example":"front_fr","description":"image field that was unselected"}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

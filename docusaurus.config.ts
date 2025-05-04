@@ -229,16 +229,42 @@ const config: Config = {
         id: "openapi",
         docsPluginId: "classic",
         config: {
-          petstore: {
-            specPath: "examples/petstore.yaml",
-            outputDir: "docs/petstore",
-            downloadUrl:
-              "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-template-openapi-docs/main/examples/petstore.yaml",
+          apiv2: {
+            specPath: "openapi/api.yml",
+            outputDir: "docs/api-v2",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
             },
           } satisfies OpenApiPlugin.Options,
+          apiv3: {
+            specPath: "openapi/api-v3.yml",
+            outputDir: "docs/api-v3",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+
+          // api: {
+          //   version: "2", // Current version
+          //   label: "v2",
+          //   specPath: "openapi/api.yml",
+          //   outputDir: "docs/api-v2",
+          //   baseUrl: "/api/v2",
+          //   versions: {
+          //     "3": {
+          //       label: "v3",
+          //       specPath: "openapi/api-v3.yml",
+          //       outputDir: "docs/api-v3",
+          //       baseUrl: "/api/v3",
+          //     },
+          //   },
+          //   sidebarOptions: {
+          //     groupPathsBy: "tag",
+          //     categoryLinkSource: "tag",
+          //   },
+          // } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
     ],

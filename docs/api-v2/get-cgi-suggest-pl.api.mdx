@@ -1,0 +1,75 @@
+---
+id: get-cgi-suggest-pl
+title: "Get Suggestions to Aid Adding/Editing Products"
+description: "For example , Dave is looking for packaging_shapes that contain the term 'fe',"
+sidebar_label: "Get Suggestions to Aid Adding/Editing Products"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVtty2zYQ/RUMHxLbI4mOe3P1VLW+1HFSe2znoWN5PBC5JBGBBAOAslSN/r1nQTqSLGea93o8I4LYPbvAnj3LZeRl7qLhfXRDMhU39KUh51300IssudpUjrC7jI4OD/knJZdYVXtlqmgYXV1GvSgxlafK866sa60SybvxZ8cmy8glBZWSn/yiJjhJa+UiWvFfLzI12WB/kWIrJ99PctV3TZ4ji0GtgV9LK0vyZDnLV/Cct6rKYUhzWdY6hEhT5dUMmSOE4kxxKruATQUoLHHm4L3qfR9g9k0gsmW0wmVtX8yZsaLzFj1xImcklBPamCmQRYbdWiZTmWP16ApZkxO+kF7wXUpVYUGCocU4ymgc9caV1HrXpzNnzNZQPCnYTUhY8o2tKB2Mq7sCofHfOMoaLVQmFqYRBeckhSNpk0IgJF5asVFAxOQ8YVJTojKViNqatEm8yBRpBsYtoC6F6SoXSuULLGLUMN6qoSM7ey7g9k2lNMN+YzWeC+9rN4zjJ2MRANRABibNZOLdoEIArta2N6f0Xe7G5q+7zxdij8+ZGhywsbVxtL+FCEBtEqkL4/zw+PD4MJTbUdJY5Rd8os31LZOp7ZiEq02jhq9kTf5aXRLzJ5CpNVmzCb3mOLOXdLpt34vWfrPsKKoVFye98MAoPSGrVHRAwpspVYEDJGZSN4GG4DfK2FhKhXTD4Pmo0jfPCOHhsUN40/0+BqRxRYN8AK49+3Qc5+W2m5wkKWV5oT5PdVmZ+ot1vpk9zRf/vDv64ceffv7l+NfR73+cnJ6d/3nx/vLDx3EEPqHHGGSUQ06e7237IvgtNjuKInW+g0/w6QcnUUDDcCG7b7qeQqVLtNlb8PyRzxrzAzOT0fYgA0rvv8X1v1qtFmpdrXWUaBXkITOh0soHzbgCAcUZGCjOmIIirEfXFzvVHTl0GfqANKthLyT60hl+AhJgnlzoXm8EOk5wSD4QcKAQqDszw6pJ44lNGKhrWidS6eVEOhqIvwGQSLDJkoRhzj/c+dAgM64K0rWoybB0lXJKUBMPKRLcSyIpjEogPBxLamcYfqZSCugckqpCVgmF0F8jjpHdwcHFx+urm7vRX3cHB0NxrQk7kCnMHLa95wMqJB+yxXke9p7bebuRc+WLZjJQZvt9v1UY1FPF+0gZ90IdPTzrH+BbxWJVdVfZLcxxkv9WjTg49E3WBzW7aYc9LnRHgxel2pEjpyHbrwDzgGHCwdRyB/32mmJFkGPCDN6Ix9c6FFcnkw87oRiBtxNTlpjcIUwH4GKTTjRUuSylXcSqSmk+KHzJ6jzvo4ToKgi75QMBuv9ucMjhu97A2yNeQh59KauNbM5Bw9tW6mHHFBIjlYoRJnCVx6c8h1GD646FL7m/XH89/G9mZqctnuY+rjVSCbrHdVx2A/Q+wgDlqbkeoRgxPIB4b7nkpvpk9WrFr9sPkjBYlZMTTRjHGXqTetEU2rX+1kExeQLgTTsJv2HNHzSbpg+8sIptEeUBuXY6yCFbn1GSUO03vHa+Axnl67fC+ekdBPNfCeeqsg==
+sidebar_class_name: "get api-method"
+info_path: docs/api-v2/open-food-facts-open-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Suggestions to Aid Adding/Editing Products"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/cgi/suggest.pl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+For example , Dave is looking for packaging_shapes that contain the term "fe",
+all packaging_shapes containing "fe" will be returned.
+This is useful if you have a search in your application,
+for a specific product field.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"schema":{"type":"string","example":"additives"},"in":"query","name":"tagtype"},{"schema":{"type":"string","example":"f"},"in":"query","name":"term"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"array"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
