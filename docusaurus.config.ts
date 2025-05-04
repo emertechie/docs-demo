@@ -7,6 +7,7 @@ import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const config: Config = {
+  noIndex: true,
   title: "My Site",
   tagline: "Dinosaurs are cool",
   url: "https://emertechie.github.io",
