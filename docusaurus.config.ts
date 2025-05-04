@@ -7,6 +7,7 @@ import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const config: Config = {
+  noIndex: true,
   title: "My Site",
   tagline: "Dinosaurs are cool",
   url: "https://emertechie.github.io",
@@ -61,9 +62,9 @@ const config: Config = {
           label: "Tutorial",
         },
         {
-          label: "Petstore API",
+          label: "API",
           position: "left",
-          to: "/docs/category/petstore-api",
+          to: "/docs/category/api-v2",
         },
         {
           href: "https://github.com/facebook/docusaurus",
@@ -229,16 +230,42 @@ const config: Config = {
         id: "openapi",
         docsPluginId: "classic",
         config: {
-          petstore: {
-            specPath: "examples/petstore.yaml",
-            outputDir: "docs/petstore",
-            downloadUrl:
-              "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-template-openapi-docs/main/examples/petstore.yaml",
+          apiv2: {
+            specPath: "openapi/api.yml",
+            outputDir: "docs/api-v2",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
             },
           } satisfies OpenApiPlugin.Options,
+          apiv3: {
+            specPath: "openapi/api-v3.yml",
+            outputDir: "docs/api-v3",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+
+          // api: {
+          //   version: "2", // Current version
+          //   label: "v2",
+          //   specPath: "openapi/api.yml",
+          //   outputDir: "docs/api-v2",
+          //   baseUrl: "/api/v2",
+          //   versions: {
+          //     "3": {
+          //       label: "v3",
+          //       specPath: "openapi/api-v3.yml",
+          //       outputDir: "docs/api-v3",
+          //       baseUrl: "/api/v3",
+          //     },
+          //   },
+          //   sidebarOptions: {
+          //     groupPathsBy: "tag",
+          //     categoryLinkSource: "tag",
+          //   },
+          // } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
     ],

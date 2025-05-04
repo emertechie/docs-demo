@@ -1,0 +1,72 @@
+---
+id: get-cgi-ingredients-pl
+title: "Performing OCR on a Product"
+description: "Open Food Facts uses optical character recognition (OCR) to retrieve nutritional data and other information from the product labels."
+sidebar_label: "Performing OCR on a Product"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV1tTGzcU/iuafUiAwTcSWuqnOtfSJIUB8tDBjEfWHu8q7EobSWtwPfz3fke7gM2tGTqdKS9eSeeic/m+I5aJrcjJoK3ZT5NhklHoqEx3tMkcpZpM8N2qSLYTR76yxpNPhstkp9/nn5S8crpiZagefIKYsiZAiU9lVRVaRdO9b55FlolXOZWSv8KiIijZ6TdSAYpBhyJuKDexZlI5m9YqTK7dQgJbuGrQzRV8kKH2K5Y0HGfkIEiXsqzY2OCq+du+e9OKjPhgbSo+SBW8qBGWsDhVshAqlw675IQjZTOjWUlsHLw92hTBYjM4TXMSpsYHn0EnlUEKaVJhQw5FbWbWlTFyMXO2FNgVbUSikFMqfHdsOCS4Kgm+EMjpA9nxcGGy1ZCSlcJMyCSITXNI32tyCwga2GOpNJbse60hnAyDq+lq+8ccvN7ZHQz6u7v9wau9wWP2lU25JOtpfSMd7ws7Ww342Rd51DkMK/J+okuZ0bPNZ9ZmBU1UYet0MteeY3jEIfckmUybB7ydoXVlxvVLjkim4gjH5INPcIDS5rZFVax2yLHoAV+9e/jy5ObXfbCe1pTmOK9dge88hMoPe70L64q0Czyg02w64y7uGjjh4Ne1uQo/pG5d9rD65UJsoJ9FapWoaldZT5trFmGwsIBObn0Y7vX3+glnxZOqAZAFR7S6PubaNBhW1p5rGtWclptSyUp/Ik5+rEQjclsKIDVW6m7vHTf7opEXTENSG2SZwe3E/rvt+MFWtiNSW0OA9DkZoPEEHTuXRU1Ce4F2QefWqJCQfhg1Jzp9cW0hfkxaCy/a30m0NDbUzbpinFzrtA3Hy3U1OVUpzbJcfzsvSmOr786Hen5xufhrsPPq9e5PP+/9Mnrz9t37Dx9/2//90+cv42QcG5SNjDI0znXe1hPBuzhsiRdX5xx8hU4nKokcTYqE3N/RJqK2YS7xEuw94Vh7/MGdGVkQqNLF5kvm64eq1Zi6rdatl+QqYmtmY6Vbrr/Lw3E9Oty/V92RF1IAB1TwCNiOF72rDD0hi8JeeLGwNVM1ULdKxWPDdefOcHpaB2KRFZ7ykcWn0lNX/AkDSqKbHEkIZvwjkAgPnbHJqahERRZlFaU8JzGlwPOCsYTxYTXYKfaYLLxl83MNVowzAi7J5NIoiq5vPI5xu62t/S+HB0cnoz9OtraG4rAgnGDegFRY9pQDxJBrbot4zjau4bwO5EyHvJ52tV3f7zQMg3rq3iaujLxQ2x4h1zF/zVBCKKU/mB1DHJH8M2v0okLHzjp1nNMReyo+Ado2uFOqe3TkC6nOHzDMfM0NB1HHCPr1IcZK8MggfiHc+uO0DsXBu+nne67YAh8rW5Z4V0Q3rQHfs+m06Pm6LKVbgKFTuuzmoWR2vuyghEDVTKO9ERBMdwbdPrtvsYHdHV6CHkMpzcptDslxD3Ki8YgQgJEUhzezca3Rl7fvp//PI6VFeqDL0KsKsGpkIc7qsh1ppwlGWuSAtaEG0ueRwOfLJbf5V1dcXfF2M1/jqNNeTguepjOghZ7Ix8ZRO3g3xWOXOgcTtW+fSOVYNCPtOU4efc084bp9Fv1750+7ufsA+q/9rb1/bp2d8cJp9oZankG85X8ubKM5UoqqsKJ175+Cq9V30sf3JxgUfwNzJ2BJ
+sidebar_class_name: "get api-method"
+info_path: docs/api-v2/open-food-facts-open-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Performing OCR on a Product"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/cgi/ingredients.pl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Open Food Facts uses optical character recognition (OCR) to retrieve nutritional data and other information from the product labels.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"schema":{"type":"string","example":"ingredients_en"},"in":"query","name":"id","required":true},{"schema":{"type":"string","example":"4251105501381"},"in":"query","name":"code","description":"Barcode of the product","required":true},{"schema":{"type":"string","example":"1"},"in":"query","name":"process_image","required":true},{"schema":{"type":"string","example":"google_cloud_vision"},"in":"query","name":"ocr_engine","required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","title":"ocr_on_product_response","properties":{"status":{"type":"integer","example":1}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

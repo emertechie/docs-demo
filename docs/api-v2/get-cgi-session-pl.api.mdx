@@ -1,0 +1,71 @@
+---
+id: get-cgi-session-pl
+title: "Login and obtain a session cookie"
+description: "Retrieve session cookie for writing operations."
+sidebar_label: "Login and obtain a session cookie"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVtty2zYQ/RUMHxzbI5Kym6auPJ6pYtetG6f2RM5DR/J4QHJFIgIJBgB1iYb/3l2Q1sVS6kyfeMHez9ldLD1VguZWqOIm8XpeCtaPU+EbMAb/BaX0Ol4CJtaiJCEU+QRWC5gCa2VYrNREABsrzWZaWFGkbGXUBKhveWq83tDrVzaDworYHXmPHU/D1wqMfa+Shddbuk+hAQOxuoKOF6vCogId8bKUrWI492ezmY/+cr/SEopYJaSz9EycQc7pzS5KwFhV9AViiyGUmkKyAgydVgb0k0g2BA3mVKQ7uX5GwYLnTXJSpaLwajTGjZkp/QP6963khn7Ho8A5JrW2U9edjdyHq/g2XD3WdSNlSqxqk8Zpt0uPbZeDKo4RmHElVw4z4AlopzJAfC8dXnvr9Z00BrtImyoyBF5hGV/DCglrITVUKJjzvJRNsC1b1s6nXFbOZ3NwQUmfnP50YFGb3g9cFdrTAx7FCYzx/O3P7345+7V7zhKVc1FcBK2ToAB7zkpus4vwnA0QtIGwcHHL517d1O5t92S3XNucZGMuJDSA5GAzRT1RKuMohKbxK8T2CLfaA8OcuvIOXxpPYIrnyFF8z6wtTS8MEU2ZBMjGYqxUMuaxNRQ6luulNnI2+SF1pdP96vMFOySwEhWzstKYCBxtWUSDUsVcZphi76x71vXqR0oorrCRF5TR5veA6NKg2TCBirfBHl6KD7BAB4L8NyL4RQ20xvk1clHPI640RYgA7Oaq417ISofxIlnNHasmUASj4iED5sjEhGHI4Cq2FTYS46bH2k46eLawTar2+eQsjQoI0oCNnrvvoCXW97iYZuLLROaFKr9qZOx0Nl98W/Gz//7y6vfrP/68+evD7ceRN3Jzg4z0U2Tbc93+k4qVoRrQBPKdEmvaeM8fgbXIXFviXGFvcFQ+Ua4hvRAzydohNrqQR29oHO9DqzG1RmvtxTWDQLo5pIWVdHyHBGTXyEB2TRRk7rt/f7ODbt8wzrAPQNIA7rhAXyqjHuNSqplhC1UhrgzXECOXlBDaGRWEOzFDi6iyQCJkiDqkIgsJtzziBgL2DxqIObJJA44jltKDYSEM6oyKDGTJSlAIK8v5BFgE1mIFqZdYnCmBo9NxjEujyPxUJOCsk0soMl7E4FyvPI4wuuPjm4/3d58e+n8/HB/32L0EPMFJyBMnO6QEBQbvosV8Hg+f23m7kVNhsyoKhNr+7zcTBvEU4RGGjHWBlh42E65+GAYhCzo3d+MBimMmr0+N0Cn4auwjNb1m3+IZAd3S4AVUO+PISB5P9hhGQUc4FNXUQb/tm1gebnTAZbbhj8raY3dX0e2OK7JAx7HKc7pYkJvWgAlVEsnQVHnO9SIURQLzILM5Tee5jxBiV40F0hsTQtP+SdAl921v4N9Tt9ZxCOa82Ijmlhao44OKaCghlbcvPS/pvlxfWf7PPalpTAtzG5aSN5cNV4Rlu32GHm4ft3JW+wfnM01vOlsuiZGftaxr+o17WNMMx9cp14JH1LnDx/r5QuAW1gRHQM+7bKL2HyiCzmo1v37povWwWpT3d4MH1I7a21yOEvh3Q7qz+UGh1PW/rIC08g==
+sidebar_class_name: "post api-method"
+info_path: docs/api-v2/open-food-facts-open-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Login and obtain a session cookie"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/cgi/session.pl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve session cookie for writing operations.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/x-www-form-urlencoded":{"schema":{"type":"object","properties":{"user_id":{"type":"string","description":"Username for login"},"password":{"type":"string","description":"Password for login","format":"password"}},"required":["user_id","password"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful login","headers":{"Set-Cookie":{"schema":{"type":"string","description":"Session cookie for subsequent authenticated requests"},"examples":{"sessionCookie":{"value":"session=user123&testuser&user_session&abcdef1234567890; domain=.example.net; path=/; SameSite=Lax"}}}}},"401":{"description":"Authentication failed"}}}
+>
+  
+</StatusCodes>
+
+
+      
