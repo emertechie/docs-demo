@@ -62,9 +62,9 @@ const config: Config = {
           label: "Tutorial",
         },
         {
-          label: "Petstore API",
+          label: "API",
           position: "left",
-          to: "/docs/category/petstore-api",
+          to: "/docs/category/api-v2",
         },
         {
           href: "https://github.com/facebook/docusaurus",
