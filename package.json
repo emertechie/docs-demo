@@ -16,7 +16,8 @@
     "clean-api-docs": "docusaurus clean-api-docs",
     "gen-api-docs:version": "docusaurus gen-api-docs:version",
     "clean-api-docs:version": "docusaurus clean-api-docs:version",
-    "format": "remark . --output"
+    "format": "remark . --output",
+    "lint": "vale docs/"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
