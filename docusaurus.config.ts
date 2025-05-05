@@ -56,13 +56,17 @@ const config: Config = {
       },
       items: [
         {
-          type: "doc",
-          docId: "intro",
+          to: "/docs/developers-guide/intro",
           position: "left",
-          label: "Docs",
+          label: "Developers Guide",
         },
         {
-          label: "API",
+          to: "/docs/api-guide/intro",
+          position: "left",
+          label: "API Guide",
+        },
+        {
+          label: "API Reference",
           position: "left",
           to: "/docs/category/api-v2",
         },
