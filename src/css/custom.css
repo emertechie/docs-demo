@@ -4,32 +4,129 @@
  * work well for content-centric websites.
  */
 
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #9f2d00;
+  --ifm-color-primary-dark: #8f2800;
+  --ifm-color-primary-darker: #872600;
+  --ifm-color-primary-darkest: #6f1f00;
+  --ifm-color-primary-light: #af3100;
+  --ifm-color-primary-lighter: #b73400;
+  --ifm-color-primary-lightest: #cf3a00;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Inter', sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #ff8714;
+  --ifm-color-primary-dark: #f87900;
+  --ifm-color-primary-darker: #ea7200;
+  --ifm-color-primary-darkest: #c15e00;
+  --ifm-color-primary-light: #ff9530;
+  --ifm-color-primary-lighter: #ff9c3d;
+  --ifm-color-primary-lightest: #ffb166;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+[data-theme='light'] {
+  body {
+    background-color: #f6f3f0;
+  }
+  
+  .navbar--fixed-top {
+    background-color: #f2e9e4;
+  }
+}
+
+.theme-doc-sidebar-menu {
+  font-size: 15px;
+
+  .menu__link {
+    line-height: 20px;
+  }
+}
+
+.table-of-contents {
+  font-size: 14px;
+}
+
+.theme-doc-sidebar-container nav {
+  padding: 1rem;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: inherit;
+}
+
+.menu__link:hover, .menu__caret:hover {
+  background-color: inherit;
+  color: var(--ifm-menu-color-active);
+}
+
+.pagination-nav__label {
+  font-weight: inherit;
+}
+
+/*
+  Override Infima's default markdown header sizes.
+  Copied from https://github.com/facebookincubator/infima/blob/82bcac5d75870e4dcc8b7a44eacd27357a52d383/packages/core/styles/content/markdown.pcss#L39
+*/
+.markdown {
+  --ifm-h1-vertical-rhythm-top: 3;
+  --ifm-h2-vertical-rhythm-top: 2;
+  --ifm-h3-vertical-rhythm-top: 1.5;
+  --ifm-heading-vertical-rhythm-top: 1.25;
+
+  --ifm-h1-vertical-rhythm-bottom: 1.25;
+  --ifm-heading-vertical-rhythm-bottom: 1;
+
+  & h1:first-child {
+    --ifm-h1-font-size: 2rem;
+
+    margin-bottom: calc(
+      var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading)
+    );
+  }
+
+  & > h2 {
+    --ifm-h2-font-size: 1.5rem;
+
+    margin-bottom: calc(
+      var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
+    );
+    margin-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading));
+  }
+
+  & > h3 {
+    --ifm-h3-font-size: 1.25rem;
+
+    margin-bottom: calc(
+      var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
+    );
+    margin-top: calc(var(--ifm-h3-vertical-rhythm-top) * var(--ifm-leading));
+  }
+
+  & > h4,
+  & > h5,
+  & > h6 {
+    margin-bottom: calc(
+      var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
+    );
+    margin-top: calc(
+      var(--ifm-heading-vertical-rhythm-top) * var(--ifm-leading)
+    );
+  }
+}
+
 /* Sidebar Method labels */
+
 .api-method>.menu__link {
   align-items: center;
   justify-content: start;
