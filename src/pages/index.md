@@ -7,4 +7,4 @@ This is a demonstration site. For more information and to view the real docs, pl
 
 :::
 
-Test home page
+View the demo documentation [here](/docs/intro)
