@@ -14,11 +14,11 @@ To prevent requests from your app being treated as bot requests, always send a c
 
 <!-- vale Google.Passive = YES -->
 
-For example: `User-Agent: MyApp/1.0 (myapp@example.com)`.
+Example header: `User-Agent: MyApp/1.0 (myapp@example.com)`.
 
 ## Write access
 
-Write operations such as editing products or uploading images require authentication. Write operations are any requests the use the `POST`, `PUT`, or `DELETE` HTTP verbs. To authenticate these requests, follow the steps below.
+Write operations such as editing products or uploading images require authentication. Write operations are any requests that use the `POST`, `PUT`, or `DELETE` HTTP verbs. To authenticate these requests, follow the steps below.
 
 ### 1. Create an account
 

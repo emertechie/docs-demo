@@ -6,6 +6,6 @@ sidebar_position: 1
 
 :::info[Todo]
 
-Not implemented yet
+Not implemented yet. For now, see the [API Guide](/docs/api-guide/intro)
 
 :::

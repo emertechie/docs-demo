@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Scan a product
+# Reading and writing product data
 
 :::info[Todo]
 
