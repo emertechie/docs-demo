@@ -20,6 +20,13 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Inter', sans-serif;
+
+    /* From tailwind colors */
+    --api-get-method-color: #3b82f6; 
+    --api-put-method-color: #16a34a;
+    --api-post-method-color: #16a34a;
+    --api-patch-method-color: #16a34a;
+    --api-delete-method-color: #ff9800;  
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -47,10 +54,6 @@
 
 .theme-doc-sidebar-menu {
   font-size: 15px;
-
-  .menu__link {
-    line-height: 20px;
-  }
 }
 
 .table-of-contents {
@@ -130,6 +133,20 @@
 .api-method>.menu__link {
   align-items: center;
   justify-content: start;
+
+}
+
+/* Make badge colors on an API page match the HTTP method colors in sidebar */
+.openapi__method-endpoint {
+  .badge.badge--success {
+    --ifm-badge-background-color: var(--api-post-method-color);
+    --ifm-badge-border-color: rgba(0, 0, 0, 0);
+  }
+
+  .badge.badge--primary {
+    --ifm-badge-background-color: var(--api-get-method-color);
+    --ifm-badge-border-color: rgba(0, 0, 0, 0);
+  }
 }
 
 .api-method>.menu__link::before {
@@ -150,25 +167,29 @@
 
 .get>.menu__link::before {
   content: "get";
-  background-color: var(--ifm-color-primary);
+  /* background-color: var(--ifm-color-primary); */
+  background-color: var(--api-get-method-color);
 }
 
 .put>.menu__link::before {
   content: "put";
-  background-color: var(--openapi-code-blue);
+  /* background-color: var(--openapi-code-blue); */
+  background-color: var(--api-put-method-color);
 }
 
 .post>.menu__link::before {
   content: "post";
-  background-color: var(--openapi-code-green);
-}
-
-.delete>.menu__link::before {
-  content: "del";
-  background-color: var(--openapi-code-red);
+  background-color: var(--api-post-method-color);
 }
 
 .patch>.menu__link::before {
   content: "patch";
-  background-color: var(--openapi-code-orange);
+  /* background-color: var(--openapi-code-orange); */
+  background-color: var(--api-patch-method-color);
+}
+
+.delete>.menu__link::before {
+  content: "del";
+  /* background-color: var(--openapi-code-red); */
+  background-color: var(--api-delete-method-color);
 }

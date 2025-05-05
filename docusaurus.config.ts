@@ -48,9 +48,9 @@ const config: Config = {
       },
     },
     navbar: {
-      title: "My Site",
+      title: "Open Food Facts",
       logo: {
-        alt: "My Site Logo",
+        alt: "Open Food Facts Logo",
         src: "img/off-logo-icon-light.svg",
         srcDark: "img/off-logo-icon-dark.svg",
       },
