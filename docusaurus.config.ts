@@ -8,8 +8,7 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const config: Config = {
   noIndex: true,
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Open Food Facts",
   url: "https://emertechie.github.io",
   baseUrl: "/docs-demo/",
   onBrokenLinks: "throw",
@@ -30,8 +29,8 @@ const config: Config = {
           sidebarPath: require.resolve("./sidebars.ts"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
         },
         blog: false,
@@ -49,10 +48,11 @@ const config: Config = {
       },
     },
     navbar: {
-      title: "My Site",
+      title: "Open Food Facts",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "Open Food Facts Logo",
+        src: "img/off-logo-icon-light.svg",
+        srcDark: "img/off-logo-icon-dark.svg",
       },
       items: [
         {
@@ -74,7 +74,6 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
       links: [
         {
           title: "Docs",
@@ -89,16 +88,12 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Discover",
+              href: "https://world.openfoodfacts.org/discover",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "Contribute",
+              href: "https://world.openfoodfacts.org/contribute",
             },
           ],
         },
@@ -107,12 +102,11 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/openfoodfacts/openfoodfacts-server",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
       additionalLanguages: [

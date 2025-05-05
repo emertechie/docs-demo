@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+* This is a Docusaurus website
+* Use the documentation at: https://docusaurus.io
+* Styles are defined in the `src/css/custom.css` file
+
