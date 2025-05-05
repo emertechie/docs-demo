@@ -68,9 +68,21 @@
   background-color: inherit;
 }
 
-.menu__link:hover, .menu__caret:hover {
+.menu__link:hover,
+.menu__caret:hover,
+.menu__list-item-collapsible:hover {
   background-color: inherit;
   color: var(--ifm-menu-color-active);
+}
+
+/* Stop non-collapsible categories from getting active color when sub-item active */
+.non-collapsible {
+  .menu__list-item-collapsible .menu__link {
+    font-weight: bold;
+  }
+  .menu__list-item-collapsible .menu__link.menu__link--active {
+    color: var(--ifm-menu-color);
+  }  
 }
 
 .pagination-nav__label {
