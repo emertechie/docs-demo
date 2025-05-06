@@ -4,7 +4,7 @@
 
 This is a WIP documentation demo site. The source is available [here](https://github.com/emertechie/docs-demo/).
 
-I based the content on the [Open Food Facts documentation](https://openfoodfacts.github.io/openfoodfacts-server/), but restructured or rewrote most of it. However, I used the original OpenAPI files to generate the [API Reference](/docs/category/api-v2) area. I will be helping complete the OpenAPI spec for the v3 API, which is currently unfinished.
+I based the content on the [Open Food Facts website](https://world.openfoodfacts.org/) and [documentation](https://openfoodfacts.github.io/openfoodfacts-server/), but restructured or rewrote most of it. However, I used the original OpenAPI files to generate the [API Reference](/docs/category/api-v2) area. I will be helping complete the OpenAPI spec for the v3 API, which is currently unfinished.
 
 <!-- vale on -->
 
