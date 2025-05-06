@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # This is needed for Vale to parse mdx files
+      - name: Install mdx2vast
+        run: npm install -g mdx2vast
+
       - uses: errata-ai/vale-action@v2.1.1
         with:
           files: docs/
