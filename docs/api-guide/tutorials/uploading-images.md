@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Uploading images
 
-:::info[Todo]
+:::info Todo
 
 Not implemented yet
 

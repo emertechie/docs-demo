@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # SDKs
 
-:::info[Todo]
+:::info Todo
 
 Not implemented yet
 

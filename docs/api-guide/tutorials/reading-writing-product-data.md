@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Reading and writing product data
 
-:::info[Todo]
+:::info Todo
 
 Not implemented yet
 

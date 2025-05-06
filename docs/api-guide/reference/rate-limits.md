@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Rate limits
 
-:::info[Todo]
+:::info Todo
 
 Not implemented yet
 

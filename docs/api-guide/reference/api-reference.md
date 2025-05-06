@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # API reference
 
-:::info[Todo]
+:::info Todo
 
 Not implemented yet
 

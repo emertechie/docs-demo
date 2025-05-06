@@ -4,7 +4,7 @@ sidebar_position: 20
 
 # Help
 
-:::info[Todo]
+:::info Todo
 
 Not implemented yet
 
