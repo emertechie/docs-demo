@@ -17,7 +17,9 @@
     "gen-api-docs:version": "docusaurus gen-api-docs:version",
     "clean-api-docs:version": "docusaurus clean-api-docs:version",
     "format": "remark . --output",
-    "lint": "vale docs/"
+    "lint:remark": "npx remark . --frail --quiet --use remark-comment",
+    "lint:vale": "vale docs/",
+    "lint": "npm run lint:remark && npm run lint:vale"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
@@ -28,7 +30,8 @@
     "docusaurus-theme-openapi-docs": "4.3.7",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "remark-comment": "^1.0.0"
   },
   "browserslist": {
     "production": [
