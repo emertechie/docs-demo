@@ -1,32 +1,15 @@
-# Template
+# Demonstration Site
 
-This template is built for [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
+This is a WIP documentation demo site. It uses:
 
-### Usage
-
-```bash
-npx create-docusaurus@3.5.2 my-website --package-manager yarn
-```
-
-> When prompted to select a template choose `Git repository`.
-
-Template Repository URL:
-
-```bash
-https://github.com/PaloAltoNetworks/docusaurus-template-openapi-docs.git
-```
-
-> When asked how the template repo should be cloned choose "copy" (unless you know better).
-
-```bash
-cd my-website
-yarn
-```
+- [Docusaurus](https://docusaurus.io/)
+- [Vale](https://vale.sh/)
+- GitHub actions to lint and build site on PRs and pushes to main branch
 
 ### Local Development
 
 ```bash
-yarn start
+npm start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -34,7 +17,7 @@ This command starts a local development server and opens up a browser window. Mo
 ### Build
 
 ```bash
-yarn build
+npm build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.

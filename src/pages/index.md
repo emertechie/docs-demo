@@ -25,11 +25,12 @@ This is the documentation for the **Product Opener** web server, which sits at t
 
 ## Documentation
 
-- To contribute to the web server, see the [Developers Guide](/docs/developers-guide/intro).
+<!-- - To contribute to the web server, see the [Developers Guide](/docs/developers-guide/intro). -->
+
 - To use the API, see the [API Guide](/docs/api-guide/intro).
 - For more details on the API, see the [API Reference](/docs/category/api-v2).
 
 ## Links
 
-- Github repo: https://github.com/openfoodfacts/openfoodfacts-server
+- GitHub repo: https://github.com/openfoodfacts/openfoodfacts-server
 - Overview and architecture diagram: https://github.com/openfoodfacts/

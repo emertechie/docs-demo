@@ -22,12 +22,13 @@ Write operations such as editing products or uploading images require authentica
 
 ### 1. Create an account
 
-- Create an account on the [Open Food Facts](https://world.openfoodfacts.org/) website for your app.
-- Notify reuse@openfoodfacts.org of the username, to grant it special app privileges.
+- Create an account on the [Open Food Facts](https://world.openfoodfacts.org/) website for your app
+  - If you are testing, create an account on the [staging version](https://world.openfoodfacts.net/) of the website which uses the **.net** domain
+- Notify reuse@openfoodfacts.org of the username, to grant it special app privileges
 
 :::note
 
-Production and staging environments have different account databases. So accounts created in the production environment only work for production requests. If you want write access to the staging environment, you'll need to create another account there too.
+Production and staging [environments](/docs/api-guide/reference/environments) have different account databases. So accounts created in the production environment only work for production requests, and same for the staging environment.
 
 :::
 

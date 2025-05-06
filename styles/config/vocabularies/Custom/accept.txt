@@ -1,8 +1,12 @@
 [Dd]ocusaurus
-Github
+GitHub
 repo
 SDKs
 PUT
 uuid
 Keycloak
 [Tt]odo
+Nutri-Score
+Nutella
+Ferrero
+above

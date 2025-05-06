@@ -4,8 +4,7 @@ sidebar_position: 10
 
 # API reference
 
-:::info Todo
+For more details on the Open Food Facts API, see the following references:
 
-Not implemented yet
-
-:::
+- [API v2 reference](/docs/category/api-v2)
+- [API v3 reference](/docs/category/api-v3)

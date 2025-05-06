@@ -89,6 +89,11 @@
   font-weight: inherit;
 }
 
+/* Fix broken code tabs styling */
+.tabs-container .tablist > li+li {
+  margin-top: 0;
+}
+
 /*
   Override Infima's default markdown header sizes.
   Copied from https://github.com/facebookincubator/infima/blob/82bcac5d75870e4dcc8b7a44eacd27357a52d383/packages/core/styles/content/markdown.pcss#L39
