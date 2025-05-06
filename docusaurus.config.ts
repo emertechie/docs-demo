@@ -56,13 +56,17 @@ const config: Config = {
       },
       items: [
         {
-          type: "doc",
-          docId: "intro",
+          to: "/docs/developers-guide/intro",
           position: "left",
-          label: "Tutorial",
+          label: "Developers Guide",
         },
         {
-          label: "API",
+          to: "/docs/api-guide/intro",
+          position: "left",
+          label: "API Guide",
+        },
+        {
+          label: "API Reference",
           position: "left",
           to: "/docs/category/api-v2",
         },
@@ -74,13 +78,18 @@ const config: Config = {
       ],
     },
     footer: {
+      style: "dark",
       links: [
         {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Developers Guide",
+              to: "/docs/developers-guide/intro",
+            },
+            {
+              label: "API Guide",
+              to: "/docs/api-guide/intro",
             },
           ],
         },
