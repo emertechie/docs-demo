@@ -29,7 +29,7 @@ Users who want to support the program voluntarily provide the data in the Open F
 - The individual contents of the database are available under the [Database Contents License](https://opendatacommons.org/licenses/dbcl/1.0/).
 - Product images are available under the [Creative Commons Attribution ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/deed.en) license. They may contain graphical elements subject to copyright or other rights that may, in some cases, be reproduced (quotation rights or fair use).
 
-We like learning what the Open Food Facts data is used for. It is not mandatory, but we would appreciate it if you would [tell us about your use case](contact@openfoodfacts.org) so that we can share them with the Open Food Facts community.
+We like learning what the Open Food Facts data is used for. It is not mandatory, but we would appreciate it if you would [tell us about your use case](mailto:contact@openfoodfacts.org) so that we can share them with the Open Food Facts community.
 
 <!-- vale on -->
 
