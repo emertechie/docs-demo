@@ -12,12 +12,12 @@ To protect our infrastructure, we enforce the following rate limits to protect o
 
 - 100 req/min for all product read requests
   - GET `/api/v\*/product` requests
-  - Reading product page
+  - Viewing product pages
 - 10 req/min for all search queries
   - GET `/api/v\*/search`
   - GET `/cgi/search.pl`
 - 2 req/min for facet queries
-  - For example `/categories`, `/label/organic`, `/ingredient/salt/category/breads`
+  - For example: `/categories`, `/label/organic`, `/ingredient/salt/category/breads`
 
 :::info
 

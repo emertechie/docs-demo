@@ -1,5 +1,5 @@
 [Dd]ocusaurus
-Github
+GitHub
 repo
 SDKs
 PUT

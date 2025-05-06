@@ -4,7 +4,7 @@ This is a WIP documentation demo site. It uses:
 
 - [Docusaurus](https://docusaurus.io/)
 - [Vale](https://vale.sh/)
-- Github actions to lint and build site on PRs and pushes to main branch
+- GitHub actions to lint and build site on PRs and pushes to main branch
 
 ### Local Development
 

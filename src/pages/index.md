@@ -31,5 +31,5 @@ This is the documentation for the **Product Opener** web server, which sits at t
 
 ## Links
 
-- Github repo: https://github.com/openfoodfacts/openfoodfacts-server
+- GitHub repo: https://github.com/openfoodfacts/openfoodfacts-server
 - Overview and architecture diagram: https://github.com/openfoodfacts/
