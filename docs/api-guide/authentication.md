@@ -27,7 +27,7 @@ Write operations such as editing products or uploading images require authentica
 
 :::note
 
-Production and staging environments have different account databases. So the account you create in the production environment will only work for production requests. If you want write access to the staging environment, you'll need to create another account there too.
+Production and staging environments have different account databases. So accounts created in the production environment only work for production requests. If you want write access to the staging environment, you'll need to create another account there too.
 
 :::
 
