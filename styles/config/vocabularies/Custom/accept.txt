@@ -6,3 +6,7 @@ PUT
 uuid
 Keycloak
 [Tt]odo
+Nutri-Score
+Nutella
+Ferrero
+above

@@ -1,0 +1,210 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Reading and writing product data
+
+This tutorial demonstrates how to read and write the [Nutri-Score](https://world.openfoodfacts.org/nutriscore) data for a product.
+
+{/* vale Google.Parens = NO */}
+
+Nutri-Score is a simplified, color-coded front-of-pack nutrition label that uses letters (A-E) and colors (green-red) to indicate the overall nutritional quality of a food product.
+
+{/* vale Google.Parens = YES */}
+
+![Example banner](/img/nutriscore-a.png)
+
+## Preparation
+
+### Create an account
+
+Read the [authentication guide](/docs/api-guide/authentication) and set up an account in the staging environment.
+
+In the tutorial steps below, replace `YOUR_USERNAME` and `YOUR_PASSWORD` with your actual account username and password.
+
+{/* :::note
+
+This tutorial includes account credentials in the body of each write request to simplify code samples. For a proper app, it's recommended to use [session based authentication](http://localhost:3000/docs-demo/docs/api-guide/authentication#session-authentication-preferred).
+
+::: */}
+
+### API request notes
+
+Some notes about the API requests in this tutorial:
+
+- All requests use the staging environment at `https://world.openfoodfacts.net/api/`
+- Following [best practice](/docs/api-guide/authentication#identify-your-app) from the authentication guide, each request includes a `User-Agent` header to identify the source app. This tutorial uses `YourApp/1.0 (yourapp@example.com)` as the value. Replace that with your actual app details for real use.
+- For write requests, this tutorial includes account credentials in the body of each write request to simplify code samples. For a proper app, it's recommended to use [session based authentication](http://localhost:3000/docs-demo/docs/api-guide/authentication#session-authentication-preferred).
+
+
+## Reading Nutri-Score data
+
+To read product data, use the [get product by barcode](/docs/api-v2/get-product-by-barcode) endpoint. All products are uniquely identified by their barcode.
+
+This example uses the [Nutella Ferrero](https://world.openfoodfacts.net/product/3017624010701/nutella) product, which has a barcode of `3017624010701`. To get all data for that product, see the following examples:
+
+<Tabs>
+<TabItem value="py" label="curl">
+
+```curl
+curl -H "User-Agent: YourApp/1.0 (yourapp@example.com)" \
+  https://world.openfoodfacts.net/api/v2/product/3017624010701
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+fetch('https://world.openfoodfacts.net/api/v2/product/3017624010701', {
+  method: 'GET',
+  headers: {
+    'User-Agent': 'YourApp/1.0 (yourapp@example.com)'
+  }
+})
+.then(response => response.json())
+.then(json => console.log(json));
+```
+
+</TabItem>
+</Tabs>
+
+Here's an example response, highlighting the Nutri-Score related data:
+
+```json
+{
+    "code": "3017624010701",
+    "product": {
+        "nutriments": {
+            "carbohydrates": 57.5,
+            "carbohydrates_100g": 57.5,
+            "carbohydrates_unit": "g",
+            "carbohydrates_value": 57.5,
+            "energy": 2255,
+            "energy-kcal": 539,
+            "energy-kcal_100g": 539,
+            "energy-kcal_unit": "kcal",
+            ...,
+            ...,
+            "sugars": 56.3,
+            "sugars_100g": 56.3,
+            "sugars_unit": "g",
+            "sugars_value": 56.3
+        },
+        "nutriscore_data": {
+            "energy": 2255,
+            "energy_points": 6,
+            "energy_value": 2255,
+            ...,
+            ...,
+            "sugars_points": 10,
+            "sugars_value": 56.3
+        },
+        "nutrition_grades": "e",
+        "product_name": "Nutella",
+        ...,
+        ...,
+    },
+    "status": 1,
+    "status_verbose": "product found"
+}
+```
+
+### Missing Nutri-Score data
+
+The Nutri-Score grade is not included in a response if the product is missing data needed to calculate it. In that case, the `misc_tags` field reports the missing data. For example:
+
+```json
+{
+    "code": "0180411000803",
+    "product": {
+        "misc_tags": [
+            "en:nutriscore-not-computed",
+            "en:nutriscore-missing-category",
+            "en:nutrition-not-enough-data-to-compute-nutrition-score",
+            "en:nutriscore-missing-nutrition-data",
+            "en:nutriscore-missing-nutrition-data-sodium",
+            "en:ecoscore-extended-data-not-computed",
+            "en:ecoscore-not-computed",
+            "en:main-countries-new-product"
+        ]
+        ...,
+        ...,
+    },
+    "status": 1,
+    "status_verbose": "product found"
+}
+```
+
+{/* vale Google.Passive = NO */}
+The example response shows the following product data is required to compute the Nutri-Score:
+{/* vale Google.Passive = YES */}
+
+{/* vale Google.Parens = NO */}
+- Category - `en:nutriscore-missing-category`
+- Sodium (salt) - `en:nutriscore-missing-nutrition-data-sodium`
+{/* vale Google.Parens = YES */}
+
+You can follow the steps below to provide these nutriment data.
+
+## Writing Nutri-Score data
+
+To write product data, use the [add or edit a product](/docs/api-v2/get-cgi-product-image-upload-pl) endpoint.
+
+Continuing the example above, the following request updates the `0180411000803` product with the missing Nutri-Score data:
+
+<Tabs>
+<TabItem value="py" label="curl">
+
+```curl
+curl -X POST https://world.openfoodfacts.net/cgi/product_jqm2.pl \
+  -H "User-Agent: YourApp/1.0 (yourapp@example.com)" \
+  -F "user_id=YOUR_USERNAME" \
+  -F "password=YOUR_PASSWORD" \
+  -F "code=0180411000803" \
+  -F "nutriment_sodium=0.015" \
+  -F "nutriment_sodium_unit=g" \
+  -F "categories=Orange Juice"
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const formData = new FormData();
+formData.append('user_id', 'YOUR_USERNAME');
+formData.append('password', 'YOUR_PASSWORD');
+formData.append('code', '0180411000803');
+formData.append('nutriment_sodium', '0.015');
+formData.append('nutriment_sodium_unit', 'g');
+formData.append('categories', 'Orange Juice');
+
+fetch('https://world.openfoodfacts.net/cgi/product_jqm2.pl', {
+  method: 'POST',
+  headers: {
+    'User-Agent': 'YourApp/1.0 (yourapp@example.com)' // Note: works in Node.js, not browsers
+  },
+  body: formData
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+
+</TabItem>
+</Tabs>
+
+{/* vale Google.Passive = NO */}
+The response includes a status of `1` if the data was saved successfully:
+{/* vale Google.Passive = YES */}
+
+```json
+{
+    "status_verbose": "fields saved",
+    "status": 1
+}
+```
+
+
