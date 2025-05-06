@@ -11,7 +11,7 @@ The Open Food Facts API has two environments:
 
 :::warning
 
-Use the staging environment while testing your app, to not affect the production database.
+Use the staging environment while testing your app to not affect the production database.
 
 :::
 
