@@ -55,11 +55,11 @@ const config: Config = {
         srcDark: "img/off-logo-icon-dark.svg",
       },
       items: [
-        {
-          to: "/docs/developers-guide/intro",
-          position: "left",
-          label: "Developers Guide",
-        },
+        // {
+        //   to: "/docs/developers-guide/intro",
+        //   position: "left",
+        //   label: "Developers Guide",
+        // },
         {
           to: "/docs/api-guide/intro",
           position: "left",
@@ -83,10 +83,10 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            {
-              label: "Developers Guide",
-              to: "/docs/developers-guide/intro",
-            },
+            // {
+            //   label: "Developers Guide",
+            //   to: "/docs/developers-guide/intro",
+            // },
             {
               label: "API Guide",
               to: "/docs/api-guide/intro",
