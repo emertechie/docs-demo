@@ -6,26 +6,45 @@ sidebar_position: 2
 
 <!-- vale Google.We = NO -->
 
-To protect our infrastructure, we enforce the following rate limits to protect our API and website:
+We enforce rate limits to protect our API and website infrastructure.
 
 <!-- vale Google.We = YES -->
 
-- 100 req/min for all product read requests
-  - GET `/api/v\*/product` requests
-  - Viewing product pages
-- 10 req/min for all search queries
-  - GET `/api/v\*/search`
-  - GET `/cgi/search.pl`
-- 2 req/min for facet queries
-  - For example: `/categories`, `/label/organic`, `/ingredient/salt/category/breads`
+If your requests come from your users directly - for example, a mobile app - the rate limits apply per user.
 
 :::info
 
-There is no limit on product write requests
+There is no rate limit on product write requests
 
 :::
 
-If your requests come from your users directly - for example, a mobile app - the rate limits apply per user.
+### Product read requests
+
+Limit: 100 req/min.
+
+Examples:
+
+- GET `/api/v\*/product` requests
+- Viewing product pages
+
+### Search queries
+
+Limit: 10 req/min.
+
+Examples:
+
+- GET `/api/v\*/search`
+- GET `/cgi/search.pl`
+
+### Facet queries
+
+Limit: 2 req/min.
+
+Examples:
+
+- `/categories`
+- `/label/organic`
+- `/ingredient/salt/category/breads`
 
 ## Bans
 

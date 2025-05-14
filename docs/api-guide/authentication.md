@@ -23,18 +23,18 @@ Write operations such as editing products or uploading images require authentica
 ### 1. Create an account
 
 - Create an account on the [Open Food Facts](https://world.openfoodfacts.org/) website for your app
-  - If you are testing, create an account on the [staging version](https://world.openfoodfacts.net/) of the website which uses the **.net** domain
+  - If you are testing, create an account on the [staging version](https://world.openfoodfacts.net/) of the website, which uses the **.net** domain
 - Notify reuse@openfoodfacts.org of the username, to grant it special app privileges
 
 :::note
 
-Production and staging [environments](/docs/api-guide/reference/environments) have different account databases. So accounts created in the production environment only work for production requests, and same for the staging environment.
+Production and staging [environments](/docs/api-guide/reference/environments) have different account databases. So ensure you use production account credentials for a production environment request, and staging credentials for a staging request.
 
 :::
 
 #### Global account
 
-You can create a global account to allow your app users to contribute without registering individual accounts on the Open Food Facts website. If you use a global account, please send the following parameters in the body of your write requests:
+You can create a global account to allow your app users to contribute without registering individual accounts on the Open Food Facts website. If you use a global account, send the following parameters in the body of your write requests:
 
 - `app_name` - The name of your app
 - `app_version` - The current version of your app

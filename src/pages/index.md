@@ -2,9 +2,13 @@
 
 <!-- vale off -->
 
-This is a WIP documentation demo site. The source is available [here](https://github.com/emertechie/docs-demo/).
+This is a documentation demo site. The source is available [here](https://github.com/emertechie/docs-demo/). I based the content on the [Open Food Facts website](https://world.openfoodfacts.org/) and [documentation](https://openfoodfacts.github.io/openfoodfacts-server/), but restructured or rewrote most of it. I did use the original OpenAPI files, however, to generate the [API Reference](/docs/category/api-v2) area.
 
-I based the content on the [Open Food Facts website](https://world.openfoodfacts.org/) and [documentation](https://openfoodfacts.github.io/openfoodfacts-server/), but restructured or rewrote most of it. For example [here](https://openfoodfacts.github.io/openfoodfacts-server/api/tutorial-off-api/) is an original guide, and [this](/docs/api-guide/tutorials/reading-writing-product-data) is my rewritten version. I did use the original OpenAPI files, however, to generate the [API Reference](/docs/category/api-v2) area.
+**Noteable content:**
+
+- [Reading and writing product data](/docs/api-guide/tutorials/reading-writing-product-data) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/tutorial-off-api/)
+- [Authentication guide](/docs/api-guide/authentication) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/#authentication)
+- Unrelated to this site: a [How To Guide takehome exercise](/docs/create-remark-plugin), max 2 pages
 
 <!-- vale on -->
 
