@@ -6,8 +6,8 @@ This is a documentation demo site. The source is available [here](https://github
 
 **Noteable content:**
 
-- [Reading and writing product data](/docs/api-guide/tutorials/reading-writing-product-data) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/tutorial-off-api/)
 - [Authentication guide](/docs/api-guide/authentication) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/#authentication)
+- [Reading and writing product data](/docs/api-guide/tutorials/reading-writing-product-data) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/tutorial-off-api/)
 - Unrelated to this site: a [How To Guide takehome exercise](/docs/create-remark-plugin), max 2 pages
 
 <!-- vale on -->

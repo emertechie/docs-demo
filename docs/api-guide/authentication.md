@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Authentication
 
-Only write operations to the API require authentication. However all requests should include a custom header to identify the source app, as shown below.
+Only write operations to the API require authentication. However all requests should include a custom `User-Agent` header to identify the source app, as shown below.
 
 ## Identify your app
 
@@ -28,7 +28,7 @@ Write operations such as editing products or uploading images require authentica
 
 :::note
 
-Production and staging [environments](/docs/api-guide/reference/environments) have different account databases. So ensure you use production account credentials for a production environment request, and staging credentials for a staging request.
+Production and staging [environments](/docs/api-guide/reference/environments) have different account databases. Ensure you use production account credentials for a production environment request, and staging credentials for a staging request.
 
 :::
 
@@ -44,7 +44,7 @@ You can create a global account to allow your app users to contribute without re
 
 <!-- vale Google.Parens = NO -->
 
-#### Session authentication (preferred)
+#### Session authentication <span class="badge badge--primary margin-left--sm">recommended</span>
 
 <!-- vale Google.Parens = YES -->
 

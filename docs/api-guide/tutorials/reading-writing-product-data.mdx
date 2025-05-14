@@ -112,7 +112,7 @@ Here's an example of a successful response, highlighting the Nutri-Score related
 The Nutri-Score grade can only be calculated if a product has all the required nutrient data. If a required property is missing, the grade is not included in the response, and the `misc_tags` field reports what properties are missing.
 {/* vale Google.Passive = YES */}
 
-Here's an example response for the `0180411000803` product:
+Here's an example response for the `0180411000803` product, which is missing some nutrient data:
 
 ```json
 {
@@ -151,7 +151,7 @@ To provide missing properties like these, see the next section on writing produc
 
 To write product data, use the [add or edit a product](/docs/api-v2/get-cgi-product-image-upload-pl) endpoint.
 
-Continuing the example above, the following request updates the `0180411000803` product with the missing Nutri-Score data:
+Continuing the example above, the following sample code updates the `0180411000803` product with the missing Nutri-Score data:
 
 <Tabs>
 <TabItem value="py" label="curl">
@@ -194,7 +194,7 @@ fetch('https://world.openfoodfacts.net/cgi/product_jqm2.pl', {
 </TabItem>
 </Tabs>
 
-If the request succeeds, the API returns a status of `1`.
+If the update request succeeds, the API returns a status of `1`.
 
 ```json
 {
@@ -203,4 +203,4 @@ If the request succeeds, the API returns a status of `1`.
 }
 ```
 
-
+You can now read the product data again to receive the Nutri-Score grade.
