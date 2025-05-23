@@ -1,6 +1,8 @@
 # Demonstration Site
 
-This is a WIP documentation demo site. It uses:
+This is a WIP documentation demo site which can be viewed here: https://emertechie.github.io/docs-demo/.
+
+It uses:
 
 - [Docusaurus](https://docusaurus.io/)
 - [Vale](https://vale.sh/)
