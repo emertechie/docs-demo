@@ -10,3 +10,5 @@ Nutri-Score
 Nutella
 Ferrero
 above
+[Aa]pplication
+robotoff
