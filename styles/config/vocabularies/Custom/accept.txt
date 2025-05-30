@@ -13,3 +13,4 @@ above
 [Aa]pplication
 robotoff
 JPEG
+CDN

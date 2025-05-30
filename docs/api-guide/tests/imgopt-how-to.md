@@ -1,6 +1,6 @@
 # Optimize images with `imgopt`
 
-This guide shows how to use the `imgopt` command line tool to optimize images.
+`imgopt` is a tool that resizes and compresses images for the web. This guide shows how to use `imgopt` to optimize images before deploying to production or uploading to a CDN.
 
 ## Why optimize images?
 
@@ -29,12 +29,12 @@ imgopt --input ./images --output ./optimized --width 1200 --quality 80
 
 ### Parameters
 
-| Parameter | Required | Description                                                                                                                                                                                                                 |
-| --------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `input`   | yes      | Path to an individual image, or a folder with images to optimize.                                                                                                                                                           |
-| `output`  | no       | Path to the folder to write optimized images. If not provided, images are written to the current working directory. **Note:** Cannot be the same as the `input` directory, to prevent overwriting original images.          |
-| `width`   | yes      | The maximum width for output images. Actual output width may be less than this to preserve original image aspect ratio.                                                                                                     |
-| `quality` | no       | A number from 1 to 100 representing the JPEG quality value, where 100 means minimal compression and 1 means maximum. A lower value results in smaller file size, but reduced image quality. If not provided, defaults to 90 |
+| Parameter | Type   | Required | Description                                                                                                                                                                                                        |
+| --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `input`   | string | yes      | Path to an individual image, or a folder with images to optimize.                                                                                                                                                  |
+| `output`  | string | no       | Path to the folder to write optimized images. If not provided, images are written to the current working directory. **Note:** Cannot be the same as the `input` directory, to prevent overwriting original images. |
+| `width`   | number | yes      | The maximum width, in pixels, for output images. Actual output width may be less than this to preserve original image aspect ratio.                                                                                |
+| `quality` | number | no       | JPEG image quality (1-100). A lower value means smaller file size, but more compression. Default: 90                                                                                                               |
 
 ## Troubleshooting
 
