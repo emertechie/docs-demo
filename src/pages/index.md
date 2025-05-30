@@ -8,7 +8,11 @@ This is a documentation demo site. The source is available [here](https://github
 
 - [Authentication guide](/docs/api-guide/authentication) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/#authentication)
 - [Reading and writing product data](/docs/api-guide/tutorials/reading-writing-product-data) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/tutorial-off-api/)
-- Unrelated to this site: a [How To Guide takehome exercise](/docs/create-remark-plugin), max 2 pages
+
+**Writing exercises:**
+
+- A [how-to takehome exercise](/docs/create-remark-plugin), max 2 pages
+- A [guide on how to use imgopt](/docs/imgopt-how-to), a fictional CLI tool
 
 <!-- vale on -->
 
