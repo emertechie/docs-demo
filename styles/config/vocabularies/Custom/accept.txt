@@ -12,3 +12,4 @@ Ferrero
 above
 [Aa]pplication
 robotoff
+JPEG
