@@ -29,7 +29,7 @@ If you can't find an existing caching implementation that works for your use cas
 - **Synchronization**: Develop processes to regularly fetch updates from the Open Food Facts API and refresh your cache
 - **Writes**: Ensure writes are successfully sent to the Open Food Facts API first before updating your own cache.
 
-:::note[Real-time notifications]
+:::note Real-time notifications
 
 <!-- vale Google.We = NO -->
 
