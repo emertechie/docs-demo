@@ -15,3 +15,5 @@ robotoff
 JPEG
 CDN
 envsync
+DevBox
+CLI
