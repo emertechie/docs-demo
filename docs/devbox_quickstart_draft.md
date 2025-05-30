@@ -11,7 +11,7 @@ DevBox sets up the following:
 - Project templates
 - Internal authentication configuration
 
-Each team can also add its own “extensions” that get run after the base setup.
+Each team can define its own extensions, which run after the base setup completes.
 
 <!-- todo: how teams can do that -->
 
@@ -62,7 +62,7 @@ This starts the bootstrap process, which adapts to the type of system it runs on
 
 Once the install script finishes, you should see a message saying “DevBox setup complete!”. Open a new terminal to get your new shell configuration.
 
-If you don’t see that message, something probably didn’t finish correctly and you should check the troubleshooting guide below.
+If you don’t see that message, something probably didn’t finish correctly and you should check the [troubleshooting](#troubleshooting) guide below.
 
 ## Troubleshooting
 
@@ -75,7 +75,7 @@ If you run into problems during install, you can execute the debug script to try
 Common issues include:
 
 - Missing tools like Git or curl.
-- Permission problems. For example, running as wrong user.
-- Network or firewall configuration
+- Permission issues, such as running the install script as the wrong user.
+- Network or firewall configuration.
 
 You can also check the install logs saved in `/tmp/devbox.log`.
