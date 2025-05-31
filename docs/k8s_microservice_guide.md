@@ -1,33 +1,43 @@
-# Deploying a New Microservice on Kubernetes
+# Deploying a new microservice on Kubernetes
 
-This guide walks you through how to deploy a new microservice to a Kubernetes cluster. It assumes you're somewhat familiar with Docker, Git, and general backend dev workflows. The microservice we’ll deploy is a Python-based REST API that connects to a Postgres database.
+This guide walks you through how to deploy a new microservice to a Kubernetes cluster.
 
-## Pre-Reqs
+## Assumptions
+
+This guide assumes you're somewhat familiar with Docker, Git, and general backend development workflows.
+
+This guide assumes you have an existing Python API microservice to be deployed, which requires a `DB_URL` environment parameter and has a `Dockerfile` in the root directory that builds a Docker container for the API.
+
+## Prerequisites
 
 - Docker installed and running
-- kubectl installed and configured to point to the correct cluster
-- Access to the private container registry (see Internal DevOps Doc)
-- A Kubernetes namespace already created for your team (e.g. `team-abc`)
+- Access to the private Docker container registry (see Internal DevOps Doc)
+- The Kubernetes `kubectl` tool installed and configured to point to the correct cluster
+- A Kubernetes namespace already created for your team—for example, `team-abc`
 
 ## Step 1 - Build the Docker image
 
-Start by building the image locally:
+In the root directory of your Python project, build the Docker image:
 
 ```
 docker build -t my-registry.local/team-abc/myservice:latest .
 ```
 
-Then push it to the registry:
+Make sure you’re authenticated with the Docker container registry by running:
+
+```
+docker login
+```
+
+Then push the Docker image to the Docker container registry:
 
 ```
 docker push my-registry.local/team-abc/myservice:latest
 ```
 
-Make sure you’re authenticated first (`docker login`).
+## Step 2 - Create the deployment
 
-## Step 2 - Create your deployment
-
-Use the following deployment manifest as a starting point:
+Copy the following deployment manifest into a `deployment.yaml` file. It defines and configures a service called `myservice`.
 
 ```
 apiVersion: apps/v1
@@ -58,7 +68,7 @@ spec:
               key: db_url
 ```
 
-Then apply it:
+Apply the configuration to the Kubernetes cluster:
 
 ```
 kubectl apply -f deployment.yaml
@@ -66,7 +76,7 @@ kubectl apply -f deployment.yaml
 
 ## Step 3 - Create the service
 
-To expose the service within the cluster:
+Copy the following service definition to a `service.yaml` file. It exposes TCP port 80 and maps that to port 8080, used by the API.
 
 ```
 apiVersion: v1
@@ -84,7 +94,7 @@ spec:
   type: ClusterIP
 ```
 
-Apply it the same way:
+Apply the service definition in the same way:
 
 ```
 kubectl apply -f service.yaml
@@ -92,19 +102,21 @@ kubectl apply -f service.yaml
 
 ## Step 4 - Testing it works
 
-Check the pods:
+Check the Kubernetes pods:
 
 ```
 kubectl get pods -n team-abc
 ```
 
-Use port-forwarding to access the API from your machine:
+You should see a list of pods in the `RUNNING` state. If not, check the [Troubleshooting](#troubleshooting) section below.
+
+Use port-forwarding to forward port 8080 on your machine to the API service:
 
 ```
 kubectl port-forward svc/myservice 8080:80 -n team-abc
 ```
 
-Then hit the API:
+Then make a request to the API. For example, a `/health` endpoint that also checks database connectivity:
 
 ```
 curl http://localhost:8080/health
@@ -115,6 +127,7 @@ If that returns something like `{ "status": "ok" }`, you're good to go.
 ## Troubleshooting
 
 - If your pod stays in `CrashLoopBackOff`, check the logs:
+
   ```
   kubectl logs deploy/myservice -n team-abc
   ```
@@ -125,6 +138,7 @@ If that returns something like `{ "status": "ok" }`, you're good to go.
 ## Next Steps
 
 Once your service is up and healthy:
+
 - Set up monitoring (see internal observability docs)
 - Add ingress configuration if the service should be externally accessible
 - Tag your image and update the deployment with a versioned tag (avoid using `latest` long-term)
