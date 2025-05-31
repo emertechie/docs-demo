@@ -1,6 +1,6 @@
-# Deploying a new microservice on Kubernetes
+# Deploying an existing microservice on Kubernetes
 
-This guide walks you through how to deploy a new microservice to a Kubernetes cluster.
+This guide walks you through how to deploy a existing microservice to a Kubernetes cluster.
 
 ## Assumptions
 
@@ -100,7 +100,7 @@ Apply the service definition in the same way:
 kubectl apply -f service.yaml
 ```
 
-## Step 4 - Testing it works
+## Step 4 - Verify the deployment
 
 Check the Kubernetes pods:
 
