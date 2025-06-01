@@ -1,12 +1,6 @@
 # Deploying an existing microservice on Kubernetes
 
-This guide walks you through how to deploy a existing microservice to a Kubernetes cluster.
-
-## Assumptions
-
-This guide assumes you're somewhat familiar with Docker, Git, and general backend development workflows.
-
-This guide assumes you have an existing Python API microservice to be deployed, which requires a `DB_URL` environment parameter and has a `Dockerfile` in the root directory that builds a Docker container for the API.
+This guide walks you through how to deploy a existing microservice to a Kubernetes cluster. This guide assumes you're somewhat familiar with Docker, Git, and general backend development workflows.
 
 ## Prerequisites
 
@@ -15,7 +9,10 @@ This guide assumes you have an existing Python API microservice to be deployed, 
 - The Kubernetes `kubectl` tool installed and configured to point to the correct cluster
 - A Kubernetes namespace already created for your team—for example, `team-abc`
 
-## Step 1 - Build the Docker image
+This guide assumes you have an existing Python API microservice to be deployed, which requires a `DB_URL` environment parameter and has a `Dockerfile` in the root directory that builds a Docker container for the API.
+
+
+## Step 1 - Build and publish the Docker image
 
 In the root directory of your Python project, build the Docker image:
 
@@ -23,21 +20,24 @@ In the root directory of your Python project, build the Docker image:
 docker build -t my-registry.local/team-abc/myservice:latest .
 ```
 
-Make sure you’re authenticated with the Docker container registry by running:
-
-```
-docker login
-```
-
-Then push the Docker image to the Docker container registry:
+Push the Docker image to the Docker container registry:
 
 ```
 docker push my-registry.local/team-abc/myservice:latest
 ```
 
+If you receive an authentication error, make sure you’re logged in to the Docker container registry by running:
+
+```
+docker login
+```
+
+
 ## Step 2 - Create the deployment
 
-Copy the following deployment manifest into a `deployment.yaml` file. It defines and configures a service called `myservice`.
+Copy the following deployment manifest into a `deployment.yaml` file.
+
+The manifest defines a service called `myservice` that uses the Docker image you just published, maps the `db_url` secret to the `DB_URL` environment variable, and opens port `8080` on the container.
 
 ```
 apiVersion: apps/v1
@@ -76,7 +76,9 @@ kubectl apply -f deployment.yaml
 
 ## Step 3 - Create the service
 
-Copy the following service definition to a `service.yaml` file. It exposes TCP port 80 and maps that to port 8080, used by the API.
+Copy the following service definition to a `service.yaml` file.
+
+The service exposes TCP port `80` and maps that to port `8080`, used by the API.
 
 ```
 apiVersion: v1
@@ -126,7 +128,7 @@ If that returns something like `{ "status": "ok" }`, you're good to go.
 
 ## Troubleshooting
 
-- If your pod stays in `CrashLoopBackOff`, check the logs:
+- If your pod stays in the `CrashLoopBackOff` status, check the logs by running:
 
   ```
   kubectl logs deploy/myservice -n team-abc
@@ -135,7 +137,7 @@ If that returns something like `{ "status": "ok" }`, you're good to go.
 - If your image won’t pull, check your registry credentials or if the image actually exists in the registry.
 - If `kubectl apply` fails, make sure your YAML files don’t have tabs or syntax issues.
 
-## Next Steps
+## Next steps
 
 Once your service is up and healthy:
 
