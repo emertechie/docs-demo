@@ -71,7 +71,7 @@ const config: Config = {
           to: "/docs/category/api-v2",
         },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/emertechie/docs-demo/",
           label: "GitHub",
           position: "right",
         },
