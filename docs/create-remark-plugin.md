@@ -1,6 +1,6 @@
 # How to create a remark plugin
 
-This guide shows you how to create and use a [remark](https://remark.js.org/) plugin. remark is a JavaScript-based tool that transforms markdown with plugins.
+This guide shows you how to create and use a [remark](https://remark.js.org/) plugin. **remark** is a JavaScript-based tool that transforms markdown with plugins.
 
 The plugin created in this guide automatically adds an anchor link to all headers in a markdown document. For example, a markdown header of `# Hello world`, when used with the plugin from this guide, produces the following HTML:
 

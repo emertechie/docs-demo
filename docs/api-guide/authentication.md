@@ -4,17 +4,15 @@ sidebar_position: 2
 
 # Authentication
 
-Only write operations to the API require authentication. However all requests should include a custom `User-Agent` header to identify the source app, as shown below.
+Only write operations to the Open Food Facts API require authentication. However, all requests should include a custom `User-Agent` header to identify the source app, as shown below.
 
 ## Identify your app
 
-<!-- vale Google.Passive = NO -->
+To prevent the API treating requests from your app as bot requests, always send a custom `User-Agent` HTTP header to identify your app. The value should be in the form of `AppName/Version (ContactEmail)`, as shown in the example below:
 
-To prevent requests from your app being treated as bot requests, always send a custom `User-Agent` HTTP header to identify your app. The value should be in the form of `AppName/Version (ContactEmail)`.
-
-<!-- vale Google.Passive = YES -->
-
-Example header: `User-Agent: MyApp/1.0 (myapp@example.com)`.
+```bash
+User-Agent: MyApp/1.0 (myapp@example.com)
+```
 
 ## Write access
 

@@ -2,14 +2,22 @@
 
 <!-- vale off -->
 
-This is a documentation demo site. The source is available [here](https://github.com/emertechie/docs-demo/). I based the content on the [Open Food Facts website](https://world.openfoodfacts.org/) and [documentation](https://openfoodfacts.github.io/openfoodfacts-server/), but restructured or rewrote most of it. I did use the original OpenAPI files, however, to generate the [API Reference](/docs/category/api-v2) area.
+This is a portfolio demonstration site built using Docusaurus.
 
-**Noteable content:**
+I based the content on the [Open Food Facts website](https://world.openfoodfacts.org/) and [documentation](https://openfoodfacts.github.io/openfoodfacts-server/), but restructured and rewrote it—except for the original OpenAPI file, which I used to generate the [API Reference](/docs/category/api-v2) area.
+
+#### Example content
 
 - [Authentication guide](/docs/api-guide/authentication) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/#authentication)
 - [Reading and writing product data](/docs/api-guide/tutorials/reading-writing-product-data) - versus the [original content](https://openfoodfacts.github.io/openfoodfacts-server/api/tutorial-off-api/)
 
-**Writing exercises:**
+All documentation available in the [API Guide](/docs/api-guide/intro) section. For more details on the API, see the [API Reference](/docs/category/api-v2).
+
+#### Source code
+
+The source is available [here](https://github.com/emertechie/docs-demo/) and includes a script to lint the Markdown, a script to enforce style rules using Vale, and Github workflows to enforce those in the CI/CD environment.
+
+#### Other portfolio writing exercises
 
 - A [how-to takehome exercise](/docs/create-remark-plugin), max 2 pages
 - A [guide on how to use imgopt](/docs/imgopt-how-to), a fictional CLI tool
@@ -17,28 +25,3 @@ This is a documentation demo site. The source is available [here](https://github
 <!-- vale on -->
 
 :::
-
----
-
-# Introduction
-
-This is the documentation for the **Product Opener** web server, which sits at the heart of the following projects:
-
-- [Open Food Facts](https://world.openfoodfacts.org/)
-- [Open Beauty Facts](https://world.openbeautyfacts.org/)
-- [Open Pet Food Facts](https://world.openpetfoodfacts.org/)
-- [Open Products Facts](https://world.openproductsfacts.org/)
-
-<!-- This is the documentation for the **Product Opener** web server, which sits at the heart of the [Open Food Facts](https://world.openfoodfacts.org/) project. It also powers the sibling [Open Beauty Facts](https://world.openbeautyfacts.org/), [Open Pet Food Facts](https://world.openpetfoodfacts.org/), and [Open Products Facts](https://world.openproductsfacts.org/) projects. -->
-
-## Documentation
-
-<!-- - To contribute to the web server, see the [Developers Guide](/docs/developers-guide/intro). -->
-
-- To use the API, see the [API Guide](/docs/api-guide/intro).
-- For more details on the API, see the [API Reference](/docs/category/api-v2).
-
-## Links
-
-- GitHub repo: https://github.com/openfoodfacts/openfoodfacts-server
-- Overview and architecture diagram: https://github.com/openfoodfacts/
